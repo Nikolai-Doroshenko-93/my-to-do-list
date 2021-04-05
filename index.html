@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Yatra+One&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='./style.css'>
+    </head>
+    <body class="body">
+        <main>
+            <div class="container">
+                <section class="header-container">
+                    <div class="header">
+                        <h2 class="title">My to-do list</h2>
+                    </div>
+                    <div class="input-and-btn">
+                        <input type="text" maxlength="34">
+                        <button class="button-add" id="add-todo">+</button>
+                    </div>
+                </section>
+                <section class="todos-container">
+                    <div class="todos-box">
+                        <ul class="todos"></ul>
+                    </div>
+                </section>
+                <section class="button-container">
+                    <button class="save" id="save">Save</button>
+                    <button class="clear" id="clear">Clear</button> 
+                    <button class="show-tips" id="show-tips">Tips</button>   
+                </section>
+            </div>
+            <div class="tips-box" id="tips">
+                <a id="close-tips">
+                    <div class="cross"></div>
+                </a>
+                <ul class="tips">
+                    <li>-To add a to-do list, write text in the input field and press Enter or plus;</li>
+                    <li>-To delete one item, hover over it and click on the trash can icon;</li>
+                    <li>-To delete all to-do lists, click "Clear";</li>
+                    <li>-Click "Save" to save your to-do list for later;</li>
+                </ul>
+            </div>
+            <div class="save-complete" id="save-complete">
+                <a id="close-save-complete">
+                    <div class="cross save-complete-cross"></div>
+                </a>
+                <p>Save complete</p>
+                <div class="save-complete__check-mark"></div>
+                <div class="save-complete__button-box">
+                    <button class="save-complete__button" id="continue-button">Continue</button>
+                    <button class="save-complete__button"id="exit-button">Exit</button>
+                </div>
+            </div>
+            <div class="write-to-do" id="write-to-do">
+                <a id="close-write-to-do">
+                    <div class="cross save-complete-cross"></div>
+                </a>
+                <p class="write-to-do__quote"><q>What a person does is what he is.</q><br><cite>G. Hegel</cite></p>  
+                <p class="write-to-do__answer">Add empty case?</p>
+                <div class="write-to-do__button-box">
+                    <button class="write-to-do__button" id="write-to-do__button-yes">Yes</button>
+                    <button class="write-to-do__button" id="write-to-do__button-no">No</button>
+                </div>
+            </div>
+            <div id="body-overlay"></div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
