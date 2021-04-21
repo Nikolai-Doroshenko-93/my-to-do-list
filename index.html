@@ -2,67 +2,52 @@
 <html>
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Yatra+One&display=swap" rel="stylesheet">
-        <link rel='stylesheet' href='./style.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body class="body">
+        <picture class="body__background-image">
+            <img src="images/backgroun-image.png">
+        </picture>
+        <header class="header">
+            <div class="header__logo-and-search">
+                <picture class="header__logo-and-search__logo">
+                    <img src="images/logo.png" class="header__logo__image">
+                </picture>
+                <div class="header__logo-and-search__search-box">
+                    <img src="images/Search.png" class="header__logo-and-search__search-icon">
+                    <input class="header__logo-and-search__search" type="input" placeholder="Search task for to do">
+                </div>
+            </div>
+            <div class="header__nav">
+                <div class="header__nav__scroll">
+                    <div class="header__nav__scroll-item header__nav__scroll-item-current"></div>
+                    <div class="header__nav__scroll-item"></div>
+                    <div class="header__nav__scroll-item"></div>
+                    <div class="header__nav__scroll-item"></div>
+                </div>
+                <div class="header__nav__link-box">
+                    <ul class="header__nav__link-box" id = "header__nav__link-box">
+                    <li><a class="header__nav__link-box--link header__nav__link-box--link__all header__nav__link-box--link__current">All</a></li>
+                    <li><a class="header__nav__link-box--link header__nav__link-box--link__active">Active</a></li>
+                    <li><a class="header__nav__link-box--link header__nav__link-box--link__done">Done</a></li>
+                    <li><a class="header__nav__link-box--link"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
         <main>
-            <div class="container">
-                <section class="header-container">
-                    <div class="header">
-                        <h2 class="title">My to-do list</h2>
-                    </div>
-                    <div class="input-and-btn">
-                        <input type="text" maxlength="34">
-                        <button class="button-add" id="add-todo">+</button>
-                    </div>
-                </section>
-                <section class="todos-container">
-                    <div class="todos-box">
-                        <ul class="todos"></ul>
-                    </div>
-                </section>
-                <section class="button-container">
-                    <button class="save" id="save">Save</button>
-                    <button class="clear" id="clear">Clear</button> 
-                    <button class="show-tips" id="show-tips">Tips</button>   
-                </section>
-            </div>
-            <div class="tips-box" id="tips">
-                <a id="close-tips">
-                    <div class="cross"></div>
-                </a>
-                <ul class="tips">
-                    <li>-To add a to-do list, write text in the input field and press Enter or plus;</li>
-                    <li>-To delete one item, hover over it and click on the trash can icon;</li>
-                    <li>-To delete all to-do lists, click "Clear";</li>
-                    <li>-Click "Save" to save your to-do list for later;</li>
-                </ul>
-            </div>
-            <div class="save-complete" id="save-complete">
-                <a id="close-save-complete">
-                    <div class="cross save-complete-cross"></div>
-                </a>
-                <p>Save complete</p>
-                <div class="save-complete__check-mark"></div>
-                <div class="save-complete__button-box">
-                    <button class="save-complete__button" id="continue-button">Continue</button>
-                    <button class="save-complete__button"id="exit-button">Exit</button>
+            <section class="content">
+                <div class="content__add-to-do">
+                    <label for="write-to-do" class="content__add-to-do__input--label">New Task</label>
+                    <textarea class="content__add-to-do__input" type="text" name="write-to-do" id="to-do-writing"></textarea>
+                    <button class="content__add-to-do__btn" id="add-to-do-btn">Add</button>
                 </div>
-            </div>
-            <div class="write-to-do" id="write-to-do">
-                <a id="close-write-to-do">
-                    <div class="cross save-complete-cross"></div>
-                </a>
-                <p class="write-to-do__quote"><q>What a person does is what he is.</q><br><cite>G. Hegel</cite></p>  
-                <p class="write-to-do__answer">Add empty case?</p>
-                <div class="write-to-do__button-box">
-                    <button class="write-to-do__button" id="write-to-do__button-yes">Yes</button>
-                    <button class="write-to-do__button" id="write-to-do__button-no">No</button>
+                <div class="content__to-do-box">
+                    <ul class="content__to-do-box__ul" id="to-do-list"></ul>
                 </div>
-            </div>
-            <div id="body-overlay"></div>
+            </section>
         </main>
-        <script src="./script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
